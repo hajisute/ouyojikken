@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="LIT" num="194" delta="unknown" >Resistive elements (PULLUP/PULLDOWN/KEEPER) on Clock net driving <arg fmt="%s" index="1">IBUFG symbol &quot;memory_main_0/memory_banks_0/memclk_0/ibufg0&quot; (output signal=memory_main_0/memory_banks_0/memclk_0/ramclki_ibufg)</arg> will be ignored.
+</msg>
+
+<msg type="warning" file="LIT" num="243" delta="unknown" >Logical network <arg fmt="%s" index="1">la&lt;31&gt;_IBUF</arg> has no load.
+</msg>
+
+<msg type="warning" file="LIT" num="395" delta="unknown" >The above <arg fmt="%s" index="1">warning</arg> message <arg fmt="%s" index="2">base_net_load_rule</arg> is repeated <arg fmt="%d" index="3">61</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="4">la&lt;30&gt;_IBUF,
+la&lt;29&gt;_IBUF,
+la&lt;28&gt;_IBUF,
+la&lt;27&gt;_IBUF,
+la&lt;26&gt;_IBUF</arg>
+To see the details of these <arg fmt="%s" index="5">warning</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="159" delta="unknown" >Net Timing constraints on signal <arg fmt="%s" index="1">lclk</arg> are pushed forward through input buffer.
+</msg>
+
+<msg type="info" file="MapLib" num="159" delta="unknown" >Net Timing constraints on signal <arg fmt="%s" index="1">lreset_l</arg> are pushed forward through input buffer.
+</msg>
+
+<msg type="info" file="MapLib" num="800" delta="unknown" >One or more Dual Data Rate register has been found in the design.  All instances have been converted from the Virtex-II based primitive (with two clocks) to the Virtex-4 based primitive (with one clock) because the C0 and C1 clocks have been confirmed to be 180 degrees out of phase, or environment variable XIL_MAP_ALWAYS_RETARGET_FDDR was set in which case map does not confirm C0 and C1 clocks to be 180 degrees out of phase.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc10&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc10&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc11&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc11&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc12&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc12&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc13&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc13&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc14&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc14&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc15&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc15&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd10&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd10&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd11&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd11&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd12&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd12&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd13&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd13&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd14&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd14&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd15&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd15&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc4&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc4&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc5&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc5&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc6&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc6&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc7&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc7&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc8&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc8&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rc9&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rc9&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd4&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd4&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd5&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd5&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd6&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd6&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd7&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd7&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd8&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd8&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">rd9&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">rd9&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra10&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra10&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra11&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra11&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra12&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra12&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra13&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra13&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra14&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra14&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra15&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra15&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra4&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra4&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra5&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra5&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra6&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra6&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra7&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra7&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra8&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra8&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="unknown" >Signal <arg fmt="%s" index="1">ra9&lt;0&gt;</arg> connected to top level port <arg fmt="%s" index="2">ra9&lt;0&gt;</arg> has been removed.
+</msg>
+
+<msg type="info" file="MapLib" num="797" delta="unknown" >Your design is targeting <arg fmt="%s" index="1">LX/SX Production Step 0/1/ES</arg> devices. Please note that there are new specifications for the DCMs to guarantee maximum frequency performance. If the DCM input clock might stop or if the DCM reset might be asserted for an extended time, then use of the dcm_standby macro may be required. Please see Answer Record 21127.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(rc4&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(rc5&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(rd4&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(rd5&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(ra4&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="unknown" >All members of TNM group &quot;<arg fmt="%s" index="1">pads(ra5&lt;*&gt;)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RA4_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RC4_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RD4_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RA5_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RC5_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RD5_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="Pack" num="249" delta="unknown" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.
+	<arg fmt="%s" index="1">memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy&lt;16&gt;</arg>
+	<arg fmt="%s" index="2">memory_main_0/user_app_0/filter0/Mcount_ptr0_cy&lt;0&gt;</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_1</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_2</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_3</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_4</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_5</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_6</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_7</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_8</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_9</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_10</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_11</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_12</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_13</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_21</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_14</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_22</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_15</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_23</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_31</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_16</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_24</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_32</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_17</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_25</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_18</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_26</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_19</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_27</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_20</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_28</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_29</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1560" delta="unknown" >The register <arg fmt="%s" index="1">memory_main_0/ld_oe_l_0_30</arg> has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The OLOGIC SR signal does not match the ILOGIC SR signal, or the ILOGIC SR signal is absent.  </arg>
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;22&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;30&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;31&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;24&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;25&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;26&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;27&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;28&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">la&lt;29&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">ramclki&lt;1&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">ramclki&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="unknown" >The signal &lt;<arg fmt="%s" index="1">ramclki&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1236" delta="unknown" >Unknown DCM_ADV feedback loop. The signal <arg fmt="%s" index="1">memory_main_0/memory_banks_0/memclk_0/ramclki_ibufg</arg> on the CLKFB pin of DCM_ADV comp <arg fmt="%s" index="2">memory_main_0/memory_banks_0/memclk_0/dll_ramclk0/STANDBY_INST/DCM_ADV_INST</arg> was driven by an IOB site but the signal loop could not be traced back to the CLK0 pin of comp <arg fmt="%s" index="3">memory_main_0/memory_banks_0/memclk_0/dll_ramclk0/STANDBY_INST/DCM_ADV_INST</arg>. The signal out the CLK0 pin must drive an IOB input pin with programming out to the PAD.
+</msg>
+
+</messages>
+

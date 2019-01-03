@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RootFolder label="COREGEN" treetype="folder" language="COREGEN">
+	<Folder label="VERILOG Component Instantiation" treetype="folder">
+		<Template label="blockram_10b1024" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+blockram_10b1024 YourInstanceName (
+    .clka(clka),
+    .dina(dina), // Bus [9 : 0] 
+    .addra(addra), // Bus [9 : 0] 
+    .wea(wea), // Bus [0 : 0] 
+    .clkb(clkb),
+    .addrb(addrb), // Bus [9 : 0] 
+    .doutb(doutb)); // Bus [9 : 0] 
+
+ 
+		</Template>
+		<Template label="week3_memory" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+week3_memory YourInstanceName (
+    .addr(addr), // Bus [3 : 0] 
+    .clk(clk),
+    .dout(dout)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="week3_distrbutedram" treetype="template">
+		</Template>
+		<Template label="week3_distributedram" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+week3_distributedram YourInstanceName (
+    .A(A), // Bus [5 : 0] 
+    .CLK(CLK),
+    .D(D), // Bus [15 : 0] 
+    .WE(WE),
+    .SPO(SPO)); // Bus [15 : 0] 
+
+ 
+		</Template>
+	</Folder>
+	<Folder label="VHDL Component Instantiation" treetype="folder">
+		<Template label="blockram_10b1024" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component blockram_10b1024
+    port (
+    clka: IN std_logic;
+    dina: IN std_logic_VECTOR(9 downto 0);
+    addra: IN std_logic_VECTOR(9 downto 0);
+    wea: IN std_logic_VECTOR(0 downto 0);
+    clkb: IN std_logic;
+    addrb: IN std_logic_VECTOR(9 downto 0);
+    doutb: OUT std_logic_VECTOR(9 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : blockram_10b1024
+        port map (
+            clka =&gt; clka,
+            dina =&gt; dina,
+            addra =&gt; addra,
+            wea =&gt; wea,
+            clkb =&gt; clkb,
+            addrb =&gt; addrb,
+            doutb =&gt; doutb);
+ 
+		</Template>
+		<Template label="week3_memory" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component week3_memory
+    port (
+    addr: IN std_logic_VECTOR(3 downto 0);
+    clk: IN std_logic;
+    dout: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : week3_memory
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            dout =&gt; dout);
+ 
+		</Template>
+		<Template label="week3_distrbutedram" treetype="template">
+		</Template>
+		<Template label="week3_distributedram" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component week3_distributedram
+    port (
+    A: IN std_logic_VECTOR(5 downto 0);
+    CLK: IN std_logic;
+    D: IN std_logic_VECTOR(15 downto 0);
+    WE: IN std_logic;
+    SPO: OUT std_logic_VECTOR(15 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : week3_distributedram
+        port map (
+            A =&gt; A,
+            CLK =&gt; CLK,
+            D =&gt; D,
+            WE =&gt; WE,
+            SPO =&gt; SPO);
+ 
+		</Template>
+	</Folder>
+</RootFolder>

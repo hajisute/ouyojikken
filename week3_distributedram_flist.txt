@@ -1,0 +1,12 @@
+# Output products list for <week3_distributedram>
+week3_distributedram.asy
+week3_distributedram.mif
+week3_distributedram.ngc
+week3_distributedram.sym
+week3_distributedram.v
+week3_distributedram.veo
+week3_distributedram.vhd
+week3_distributedram.vho
+week3_distributedram.xco
+week3_distributedram_flist.txt
+week3_distributedram_xmdf.tcl

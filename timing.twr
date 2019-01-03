@@ -1,0 +1,87 @@
+Number of Timing Constraints that were not applied: 7
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* PERIOD analysis for net "memory_main_0/me | SETUP   |    -1.176ns|     6.676ns|     113|       44373
+  mory_banks_0/memclk_0/dll_memclk/CLK0_NUB | HOLD    |     0.349ns|            |       0|           0
+  " derived from  NET "mclk_ibufg" PERIOD = |         |            |            |        |            
+   5.5 ns HIGH 50%                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "LBUS_PADS" OFFSET = IN 6.8 ns BE | SETUP   |     0.019ns|     6.781ns|       0|           0
+  FORE COMP "lclk"                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_SRAM_PADS_FFS = MAXDELAY FROM TIMEGRP  | SETUP   |     0.347ns|     1.153ns|       0|           0
+  "MEM_PADS" TO TIMEGRP "MEMCLK_FFS"        |         |            |            |        |            
+    1.5 ns                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_FFS_SRAM_PADS = MAXDELAY FROM TIMEGRP  | MAXDELAY|     0.443ns|     3.057ns|       0|           0
+  "MEMCLK_FFS" TO TIMEGRP "MEM_PADS"        |         |            |            |        |            
+    3.5 ns                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_L_FFS_TO_M_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     0.574ns|     3.426ns|       0|           0
+   "LCLK_FFS" TO TIMEGRP "MEMCLK_FFS" 4     |         |            |            |        |            
+       ns DATAPATHONLY                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_M_FFS_TO_L_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     2.068ns|     1.932ns|       0|           0
+   "MEMCLK_FFS" TO TIMEGRP "LCLK_FFS" 4     |         |            |            |        |            
+       ns DATAPATHONLY                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "refclk_ibufg" PERIOD = 4.5 ns HIGH 5 | SETUP   |     2.956ns|     1.544ns|       0|           0
+  0%                                        | HOLD    |     0.522ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "LBUS_PADS" OFFSET = OUT 9.8 ns A | MAXDELAY|     3.245ns|     6.555ns|       0|           0
+  FTER COMP "lclk"                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mclk_ibufg" PERIOD = 5.5 ns HIGH 50% | SETUP   |     4.252ns|     1.248ns|       0|           0
+                                            | HOLD    |     0.471ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "lclk_dcm_0/dll_l | SETUP   |     4.675ns|     9.325ns|       0|           0
+  clk/CLK0_NUB" derived from  NET "lclk_dcm | HOLD    |     0.341ns|            |       0|           0
+  _0/lclk_ibufg" PERIOD = 14 ns HIGH 50%    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "lclk_dcm_0/lclk_ibufg" PERIOD = 14 n | SETUP   |    12.735ns|     1.265ns|       0|           0
+  s HIGH 50%                                | HOLD    |     0.454ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "lreset_l_IBUF" MAXDELAY = 100 ns     | MAXDELAY|    95.393ns|     4.607ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "memory_main_0/me | N/A     |         N/A|         N/A|     N/A|         N/A
+  mory_banks_0/memclk_0/dll_ramclk0/CLK0_NU |         |            |            |        |            
+  B" derived from  NET "mclk_ibufg" PERIOD  |         |            |            |        |            
+  = 5.5 ns HIGH 50%                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_M_FFS_TO_L_RAMS = MAXDELAY FROM TIMEGR | N/A     |         N/A|         N/A|     N/A|         N/A
+  P "MEMCLK_FFS" TO TIMEGRP "LCLK_RAMS"     |         |            |            |        |            
+       4 ns DATAPATHONLY                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_M_RAMS_TO_L_FFS = MAXDELAY FROM TIMEGR | N/A     |         N/A|         N/A|     N/A|         N/A
+  P "MEMCLK_RAMS" TO TIMEGRP "LCLK_FFS"     |         |            |            |        |            
+       4 ns DATAPATHONLY                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_M_RAMS_TO_L_RAMS = MAXDELAY FROM TIMEG | N/A     |         N/A|         N/A|     N/A|         N/A
+  RP "MEMCLK_RAMS" TO TIMEGRP         "LCLK |         |            |            |        |            
+  _RAMS" 4 ns DATAPATHONLY                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_L_FFS_TO_M_RAMS = MAXDELAY FROM TIMEGR | N/A     |         N/A|         N/A|     N/A|         N/A
+  P "LCLK_FFS" TO TIMEGRP "MEMCLK_RAMS"     |         |            |            |        |            
+       4 ns DATAPATHONLY                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_L_RAMS_TO_M_FFS = MAXDELAY FROM TIMEGR | N/A     |         N/A|         N/A|     N/A|         N/A
+  P "LCLK_RAMS" TO TIMEGRP "MEMCLK_FFS"     |         |            |            |        |            
+       4 ns DATAPATHONLY                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_L_RAMS_TO_M_RAMS = MAXDELAY FROM TIMEG | N/A     |         N/A|         N/A|     N/A|         N/A
+  RP "LCLK_RAMS" TO TIMEGRP         "MEMCLK |         |            |            |        |            
+  _RAMS" 4 ns DATAPATHONLY                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

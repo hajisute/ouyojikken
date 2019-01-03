@@ -1,0 +1,5 @@
+verilog isim_temp "cmp_unit.v"
+verilog isim_temp "compare.v"
+verilog isim_temp "sort_column.v"
+verilog isim_temp "sort_column_test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
