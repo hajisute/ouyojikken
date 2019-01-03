@@ -1,0 +1,11 @@
+# Output products list for <blockram_10b1024>
+blockram_10b1024.veo
+blockram_10b1024.sym
+blockram_10b1024.ngc
+blockram_10b1024_flist.txt
+blockram_10b1024.vho
+blockram_10b1024.vhd
+blockram_10b1024.v
+blockram_10b1024_xmdf.tcl
+blockram_10b1024.asy
+blockram_10b1024.xco

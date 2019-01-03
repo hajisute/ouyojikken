@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="XdmHelpers" num="793" delta="unknown" >The TNM &quot;<arg fmt="%s" index="1">MEMCLK_FFS</arg>&quot; drives the <arg fmt="%s" index="2">CLKIN</arg> pin of <arg fmt="%s" index="3">DCM_ADV</arg> &quot;<arg fmt="%s" index="4">memory_main_0/memory_banks_0/memclk_0/dll_ramclk0/STANDBY_INST/DCM_ADV_INST</arg>&quot;. This TNM cannot be traced through the <arg fmt="%s" index="5">DCM_ADV</arg> because it is not used exclusively by one PERIOD specification. This TNM is used in the following user groups and/or specifications:
+</msg>
+
+<msg type="warning" file="XdmHelpers" num="793" delta="unknown" >The TNM &quot;<arg fmt="%s" index="1">MEMCLK_RAMS</arg>&quot; drives the <arg fmt="%s" index="2">CLKIN</arg> pin of <arg fmt="%s" index="3">DCM_ADV</arg> &quot;<arg fmt="%s" index="4">memory_main_0/memory_banks_0/memclk_0/dll_ramclk0/STANDBY_INST/DCM_ADV_INST</arg>&quot;. This TNM cannot be traced through the <arg fmt="%s" index="5">DCM_ADV</arg> because it is not used exclusively by one PERIOD specification. This TNM is used in the following user groups and/or specifications:
+</msg>
+
+</messages>
+

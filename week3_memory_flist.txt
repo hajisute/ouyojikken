@@ -1,0 +1,12 @@
+# Output products list for <week3_memory>
+week3_memory.asy
+week3_memory.mif
+week3_memory.ngc
+week3_memory.sym
+week3_memory.v
+week3_memory.veo
+week3_memory.vhd
+week3_memory.vho
+week3_memory.xco
+week3_memory_flist.txt
+week3_memory_xmdf.tcl
