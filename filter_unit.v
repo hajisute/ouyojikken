@@ -27,6 +27,7 @@ module filter_unit	#(
 	//出力画素10b（tag[2b]+pixel[8b]）
 	output [DATA_WIDTH-1:0] data_out
 );
+	wire [DATA_WIDTH -1 :0] data_out_wire;
 	//for文用の変数宣言
 	integer	i,j;
 
@@ -74,7 +75,7 @@ module filter_unit	#(
 			end
 		end
 		else begin
-
+			data_out <= data_out_wire;
 			/////////////////////////////////////////////////////////
 			//OPE_WIDTH×OPE_WIDTHシフトレジスタ
 			//特に用がなければ触らない
@@ -125,7 +126,7 @@ module filter_unit	#(
 		.clk (clk),
 		.rst (rst),
 		.refresh(refresh),
-		.out (data_out)
+		.out (data_out_wire)
 	);
 
 	

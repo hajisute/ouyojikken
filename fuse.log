@@ -1,34 +1,31 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation_test_v_isim_beh.exe -prj C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation_test_v_beh.prj work.operation_test_v work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/yuuya/git/ouyojikken/operation_test_v_isim_beh.exe -prj C:/Users/yuuya/git/ouyojikken/operation_test_v_beh.prj work.operation_test_v work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/cmp_unit.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/week3_memory.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/compare.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sqrt.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/abs.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sobelfilter.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/Queue.v" into library work
-WARNING:HDLCompiler:693 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/Queue.v" Line 41: Parameter declaration becomes local in Queue2 with formal parameter declaration list
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/medianfilter.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation.v" into library work
-Analyzing Verilog file "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation_test.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/cmp_unit.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/week3_memory.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/compare.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/sqrt.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/sort_column.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/abs.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/sobelfilter.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/Queue.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/yuuya/git/ouyojikken/Queue.v" Line 41: Parameter declaration becomes local in Queue2 with formal parameter declaration list
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/medianfilter.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/operation.v" into library work
+Analyzing Verilog file "C:/Users/yuuya/git/ouyojikken/operation_test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation.v" Line 98: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation.v" Line 117: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation.v" Line 135: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/medianfilter.v" Line 45: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/medianfilter.v" Line 68: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 51: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 72: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 92: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 112: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 131: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 150: Port refresh is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/sort_column.v" Line 170: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/medianfilter.v" Line 45: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/medianfilter.v" Line 68: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 51: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 72: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 92: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 112: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 131: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 150: Port refresh is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/yuuya/git/ouyojikken/sort_column.v" Line 170: Port refresh is not connected to this instance
 Completed static elaboration
 Compiling module cmp_unit(DATA_WIDTH=8)
 Compiling module compare(DATA_WIDTH=8)
@@ -47,6 +44,6 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 14 Verilog Units
-Built simulation executable C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/operation_test_v_isim_beh.exe
-Fuse Memory Usage: 32004 KB
-Fuse CPU Usage: 609 ms
+Built simulation executable C:/Users/yuuya/git/ouyojikken/operation_test_v_isim_beh.exe
+Fuse Memory Usage: 32060 KB
+Fuse CPU Usage: 686 ms
