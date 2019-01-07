@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/yuuya/Documents/workspace/AppLab/fpga-filter-hardware-20181204/cmp_unit.v";
+static const char *ng0 = "C:/Users/yuuya/git/ouyojikken/cmp_unit.v";
 
 
 

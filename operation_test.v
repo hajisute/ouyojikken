@@ -31,15 +31,18 @@ module operation_test_v;
 	reg refresh;
 
 	// Outputs
-	wire [9:0] out;
-
+	reg [9:0] out;
+	wire [9:0] out_wire;
+	always@(posedge clk)begin
+		out <= out_wire;
+	end
 	// Instantiate the Unit Under Test (UUT)
 	operation uut (
 		.data_bus(data_bus), 
 		.clk(clk), 
 		.rst(rst), 
 		.refresh(refresh), 
-		.out(out)
+		.out(out_wire)
 	);
 	
 	// ƒNƒƒbƒN‚Ì¶¬
