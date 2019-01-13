@@ -37,30 +37,28 @@ module medianfilter#(
 		output reg [DATA_WIDTH-1:0] out
 	);
 	
-	reg [8-1:0]input_tmp[7-1:0];//入力を一時保存するためのレジスタ
-	reg [8-1:0]queue_of_medians[7-1:0];//入力の中央値をFIFOで記憶するレジスタ
-	wire [8-1:0]queue_of_medians_wire[7-1:0];//同名のレジスタの入力用ワイヤ
+	reg [8-1:0]tmp[7-1:0];
+	reg [8-1:0]queue[7-1:0];
+	wire [8-1:0]queue_wire[7-1:0];
 	wire [8-1:0]out_wire;
-
-	//sort_column:in0-6 -> out0-6(sorted)
-	//sort_column以下は未整備です。。。
+	//reg tmp;
 	sort_column #(
 		.DATA_WIDTH(DATA_WIDTH),
 		.CULUMN_NUM(COLUMN_NUM)	  
-	)sort_input(
+	)sort_colmun0(
 		.clk(clk),
 		.rst(rst),
-		.in0(input_tmp[0]),
-		.in1(input_tmp[1]),
-		.in2(input_tmp[2]),
-		.in3(input_tmp[3]),
-		.in4(input_tmp[4]),
-		.in5(input_tmp[5]),
-		.in6(input_tmp[6]),	
+		.in0(tmp[0]),
+		.in1(tmp[1]),
+		.in2(tmp[2]),
+		.in3(tmp[3]),
+		.in4(tmp[4]),
+		.in5(tmp[5]),
+		.in6(tmp[6]),	
 		.out0(),
 		.out1(),
 		.out2(),
-		.out3(queue_of_medians_wire[0]),
+		.out3(queue_wire[0]),
 		.out4(),
 		.out5(),
 		.out6()
@@ -70,16 +68,16 @@ module medianfilter#(
 	sort_column #(
 		.DATA_WIDTH(DATA_WIDTH),
 		.CULUMN_NUM(COLUMN_NUM)	  
-	)sort_queue_of_medians(
+	)sort_queue0(
 		.clk(clk),
 		.rst(rst),
-		.in0(queue_of_medians[0]),
-		.in1(queue_of_medians[1]),
-		.in2(queue_of_medians[2]),
-		.in3(queue_of_medians[3]),
-		.in4(queue_of_medians[4]),
-		.in5(queue_of_medians[5]),
-		.in6(queue_of_medians[6]),
+		.in0(queue[0]),
+		.in1(queue[1]),
+		.in2(queue[2]),
+		.in3(queue[3]),
+		.in4(queue[4]),
+		.in5(queue[5]),
+		.in6(queue[6]),
 		.out0(),
 		.out1(),
 		.out2(),
@@ -96,35 +94,37 @@ module medianfilter#(
 	always @(posedge clk) begin 
 		if(rst|refresh)begin
 			out <=  8'b00000000;
+			//median_to_queue_wire <= 8'b000000000;
 			for(i = 0; i < 7;i = i + 1)begin
-				queue_of_medians[i] <= 8'b00000010;
-				input_tmp[i] <= 8'b0;
+				queue[i] <= 8'b00000010;
+				tmp[i] <= 8'b0;
 			end
 		end else begin
+			//tmp <= median_to_queue_wire;
 			out <= out_wire;
-			queue_of_medians[0] <= queue_of_medians_wire[0];
-			queue_of_medians[1] <= queue_of_medians_wire[1];
-			queue_of_medians[2] <= queue_of_medians_wire[2];
-			queue_of_medians[3] <= queue_of_medians_wire[3];
-			queue_of_medians[4] <= queue_of_medians_wire[4];
-			queue_of_medians[5] <= queue_of_medians_wire[5];
-			queue_of_medians[6] <= queue_of_medians_wire[6];
-			input_tmp[0] <= in0;
-			input_tmp[1] <= in1;
-			input_tmp[2] <= in2;
-			input_tmp[3] <= in3;
-			input_tmp[4] <= in4;
-			input_tmp[5] <= in5;
-			input_tmp[6] <= in6;
+			queue[0] <= queue_wire[0];
+			queue[1] <= queue_wire[1];
+			queue[2] <= queue_wire[2];
+			queue[3] <= queue_wire[3];
+			queue[4] <= queue_wire[4];
+			queue[5] <= queue_wire[5];
+			queue[6] <= queue_wire[6];
+			tmp[0] <= in0;
+			tmp[1] <= in1;
+			tmp[2] <= in2;
+			tmp[3] <= in3;
+			tmp[4] <= in4;
+			tmp[5] <= in5;
+			tmp[6] <= in6;
 		end
 	end
 
-	assign queue_of_medians_wire[1] = queue_of_medians[0];
-	assign queue_of_medians_wire[2] = queue_of_medians[1];
-	assign queue_of_medians_wire[3] = queue_of_medians[2];
-	assign queue_of_medians_wire[4] = queue_of_medians[3];
-	assign queue_of_medians_wire[5] = queue_of_medians[4];
-	assign queue_of_medians_wire[6] = queue_of_medians[5];
+	assign queue_wire[1] = queue[0];
+	assign queue_wire[2] = queue[1];
+	assign queue_wire[3] = queue[2];
+	assign queue_wire[4] = queue[3];
+	assign queue_wire[5] = queue[4];
+	assign queue_wire[6] = queue[5];
 	
 
 endmodule
