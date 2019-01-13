@@ -1,4 +1,4 @@
-vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware\memif_pkg.vhd"
-vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware\memory_common_pkg.vhd"
-vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware\user_defs_pkg-xrc4sx.vhd"
-vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware\user_app.vhd"
+vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127\memif_pkg.vhd"
+vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127\memory_common_pkg.vhd"
+vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127\user_defs_pkg-xrc4sx.vhd"
+vhdl work "C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127\user_app.vhd"
