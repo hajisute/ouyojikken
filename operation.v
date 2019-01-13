@@ -59,16 +59,10 @@ module operation	#(
 
 
 	//出力画素のtag
-	reg [TAG_WIDTH-1:0] tag_out;
+	reg [TAG_WIDTH-1:0] tag_out;//適当に遅らせましょう
 	wire [TAG_WIDTH-1:0] tag_out_wire;
-	//適当に遅らせましょう
-
-	reg [8-1:0] tmp[OPE_WIDTH-1:0];
-	reg [8-1:0] median_of_median[3-1:0][3-1:0];
-	wire [8-1:0] median_of_median_wire[3-1:0][3-1:0];
-
-	  
-	//generate文	 
+		  
+	//---------------------------------------------------------generate文---------------------------------------	 
 	//data_busから各画素（配列）への対応付け（基本的には触らない）
 	genvar x,y;
 	generate	
@@ -79,7 +73,7 @@ module operation	#(
 			end
 		end
 	endgenerate
-	//ここまで
+	//ここまで----------------------------------------------------------------------------------------------------
 
 	//中心画素のtagを入力タグとして使用
 	assign tag_in = d[OPE_WIDTH/2][OPE_WIDTH/2][8+:TAG_WIDTH];
@@ -88,7 +82,12 @@ module operation	#(
 	assign out[8+:TAG_WIDTH] = tag_out;
 	assign out[0+:8] = pixel_out;
    
-	
+	//input_tmp:i(窓に相当)を一度保存するレジスタ. medianfilter:input_tmp -> median_of_median_wire(sorted)
+	//median_of_median:medianfilterの出力を記録するレジスタ
+	//median_of_median_wire:同名のレジスタの入力
+	reg [8-1:0] input_tmp[OPE_WIDTH-1:0];
+	reg [8-1:0] median_of_median[3-1:0][3-1:0];
+	wire [8-1:0] median_of_median_wire[3-1:0][3-1:0];
 
 	//画素値を参照したい場合はi[y][x]を使用してください。
 	//出力画素値はpixel_out，そのtag値はtag_outを使用してください．
@@ -102,13 +101,13 @@ module operation	#(
 		.clk(clk),
 		.rst(rst),
 		.refresh(refresh),
-		.in0(tmp[0]),
-		.in1(tmp[1]),
-		.in2(tmp[2]),
-		.in3(tmp[3]),
-		.in4(tmp[4]),
-		.in5(tmp[5]),
-		.in6(tmp[6]),	
+		.in0(input_tmp[0]),
+		.in1(input_tmp[1]),
+		.in2(input_tmp[2]),
+		.in3(input_tmp[3]),
+		.in4(input_tmp[4]),
+		.in5(input_tmp[5]),
+		.in6(input_tmp[6]),	
 		.out(median_of_median_wire[0][0])
 
 	);
@@ -122,13 +121,13 @@ module operation	#(
 		.clk(clk),
 		.rst(rst),
 		.refresh(refresh),
-		.in0(tmp[1]),
-		.in1(tmp[2]),
-		.in2(tmp[3]),
-		.in3(tmp[4]),
-		.in4(tmp[5]),
-		.in5(tmp[6]),
-		.in6(tmp[7]),	
+		.in0(input_tmp[1]),
+		.in1(input_tmp[2]),
+		.in2(input_tmp[3]),
+		.in3(input_tmp[4]),
+		.in4(input_tmp[5]),
+		.in5(input_tmp[6]),
+		.in6(input_tmp[7]),	
 		.out(median_of_median_wire[1][0])
 //		.out(pixel_out_wire)
 	);
@@ -142,16 +141,17 @@ module operation	#(
 		.clk(clk),
 		.rst(rst),
 		.refresh(refresh),
-		.in0(tmp[2]),
-		.in1(tmp[3]),
-		.in2(tmp[4]),
-		.in3(tmp[5]),
-		.in4(tmp[6]),
-		.in5(tmp[7]),
-		.in6(tmp[8]),	
+		.in0(input_tmp[2]),
+		.in1(input_tmp[3]),
+		.in2(input_tmp[4]),
+		.in3(input_tmp[5]),
+		.in4(input_tmp[6]),
+		.in5(input_tmp[7]),
+		.in6(input_tmp[8]),	
 		.out(median_of_median_wire[2][0])
 	);
 	//-------------------------------------------ここまで----------------------------------------------------------
+	
 	integer j;
 	integer k;
 	//median_of_medianをキューとして扱う
@@ -165,7 +165,7 @@ module operation	#(
 				end
 			end
 			for(j = 0;j < OPE_WIDTH; j = j + 1)begin
-				tmp[j] = 8'b0;
+				input_tmp[j] = 8'b0;
 			end
 		end else begin
 			pixel_out <= pixel_out_wire;
@@ -179,15 +179,15 @@ module operation	#(
 			median_of_median[2][0] <= median_of_median_wire[2][0];
 			median_of_median[2][1] <= median_of_median_wire[2][1];
 			median_of_median[2][2] <= median_of_median_wire[2][2];
-			tmp[0] = i[0][0];
-			tmp[1] = i[1][0];
-			tmp[2] = i[2][0];
-			tmp[3] = i[3][0];
-			tmp[4] = i[4][0];
-			tmp[5] = i[5][0];
-			tmp[6] = i[6][0];
-			tmp[7] = i[7][0];
-			tmp[8] = i[8][0];
+			input_tmp[0] = i[0][0];
+			input_tmp[1] = i[1][0];
+			input_tmp[2] = i[2][0];
+			input_tmp[3] = i[3][0];
+			input_tmp[4] = i[4][0];
+			input_tmp[5] = i[5][0];
+			input_tmp[6] = i[6][0];
+			input_tmp[7] = i[7][0];
+			input_tmp[8] = i[8][0];
 		end
 	end
 	
