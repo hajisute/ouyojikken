@@ -96,7 +96,7 @@ module sobelfilter #(
 		end else begin
 
 			/////////////////////////////////////////////////////////
-			// ‰‰ŽZ‰ñ˜H(–¢ŽÀ‘•)
+			// ‰‰ŽZ‰ñ˜H
 			reg1 <= in0 + in6;
 			reg2 <= 2 * in3;  
 			reg3 <= in2 + in8;  
