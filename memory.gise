@@ -21,8 +21,218 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="memory.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="blockram_10b1024.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="blockram_10b1024.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="blockram_10b1024.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="blockram_10b1024.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="blockram_10b1024.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="blockram_10b1024.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="blockram_10b1024.vho" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cmp_unit_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cmp_unit_test_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="compare_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="compare_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="compare_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="medianfilter_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="medianfilter_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="medianfilter_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="operation_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="operation_test_v_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="operation_test_v_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="operation_test_v_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="operation_test_v_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sobel_test_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sort_column_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sort_column_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sort_column_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sort_column_test_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sort_compare_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sort_compare_test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="week3_distributedram.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="week3_distributedram.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="week3_distributedram.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="week3_distributedram.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="week3_distributedram.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="week3_distributedram.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="week3_distributedram.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="week3_memory.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="week3_memory.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="week3_memory.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="week3_memory.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="week3_memory.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="week3_memory.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="week3_memory.vho" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1543318262" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1543318262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1546874941" xil_pn:in_ck="2307898951905995731" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1546874941">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Queue.v"/>
+      <outfile xil_pn:name="abs.v"/>
+      <outfile xil_pn:name="afifo.vhd"/>
+      <outfile xil_pn:name="arbiter_2.vhd"/>
+      <outfile xil_pn:name="arbiter_4.vhd"/>
+      <outfile xil_pn:name="async_port.vhd"/>
+      <outfile xil_pn:name="cmp_unit.v"/>
+      <outfile xil_pn:name="cmp_unit_test.v"/>
+      <outfile xil_pn:name="compare.v"/>
+      <outfile xil_pn:name="compare_test.v"/>
+      <outfile xil_pn:name="count2tc_sync.vhd"/>
+      <outfile xil_pn:name="dcm_standby.vhd"/>
+      <outfile xil_pn:name="detector.vhd"/>
+      <outfile xil_pn:name="distmem.vhd"/>
+      <outfile xil_pn:name="distmem0.vhd"/>
+      <outfile xil_pn:name="dpbram.vhd"/>
+      <outfile xil_pn:name="dpbram0.vhd"/>
+      <outfile xil_pn:name="dpmem_pkg.vhd"/>
+      <outfile xil_pn:name="drp_robot.vhd"/>
+      <outfile xil_pn:name="fifo_pkg.vhd"/>
+      <outfile xil_pn:name="filter.v"/>
+      <outfile xil_pn:name="filter_unit.v"/>
+      <outfile xil_pn:name="lclk_dcm_v4.vhd"/>
+      <outfile xil_pn:name="localbus_pkg.vhd"/>
+      <outfile xil_pn:name="medianfilter.v"/>
+      <outfile xil_pn:name="medianfilter_test.v"/>
+      <outfile xil_pn:name="memclk-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memif_def_sim.vhd"/>
+      <outfile xil_pn:name="memif_int_pkg.vhd"/>
+      <outfile xil_pn:name="memif_pkg.vhd"/>
+      <outfile xil_pn:name="memory-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memory_banks-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memory_common_pkg.vhd"/>
+      <outfile xil_pn:name="memory_main.vhd"/>
+      <outfile xil_pn:name="memory_test.vhd"/>
+      <outfile xil_pn:name="operation.v"/>
+      <outfile xil_pn:name="operation_test.v"/>
+      <outfile xil_pn:name="plxdssm.vhd"/>
+      <outfile xil_pn:name="pulse_sync.vhd"/>
+      <outfile xil_pn:name="reg_sync.vhd"/>
+      <outfile xil_pn:name="ringosc.vhd"/>
+      <outfile xil_pn:name="sobel_test.v"/>
+      <outfile xil_pn:name="sobelfilter.v"/>
+      <outfile xil_pn:name="sort_column.v"/>
+      <outfile xil_pn:name="sort_column_test.v"/>
+      <outfile xil_pn:name="spd_i2c.vhd"/>
+      <outfile xil_pn:name="sqrt.v"/>
+      <outfile xil_pn:name="sqrt_test.v"/>
+      <outfile xil_pn:name="standby.vhd"/>
+      <outfile xil_pn:name="standby_pkg.vhd"/>
+      <outfile xil_pn:name="user_app.vhd"/>
+      <outfile xil_pn:name="user_defs_pkg-xrc4sx.vhd"/>
+      <outfile xil_pn:name="user_reg_sync.vhd"/>
+      <outfile xil_pn:name="zbtsram_port.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1543916360" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2470787425892847836" xil_pn:start_ts="1543916360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1543916360" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5440922560752482728" xil_pn:start_ts="1543916360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1543318324" xil_pn:in_ck="1086677311971890580" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8085082848832871302" xil_pn:start_ts="1543318324">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="blockram_10b1024.ngc"/>
+      <outfile xil_pn:name="blockram_10b1024.v"/>
+      <outfile xil_pn:name="week3_distributedram.ngc"/>
+      <outfile xil_pn:name="week3_distributedram.v"/>
+      <outfile xil_pn:name="week3_memory.ngc"/>
+      <outfile xil_pn:name="week3_memory.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1546874941" xil_pn:in_ck="-8310912755955239157" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1546874941">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Queue.v"/>
+      <outfile xil_pn:name="abs.v"/>
+      <outfile xil_pn:name="afifo.vhd"/>
+      <outfile xil_pn:name="arbiter_2.vhd"/>
+      <outfile xil_pn:name="arbiter_4.vhd"/>
+      <outfile xil_pn:name="async_port.vhd"/>
+      <outfile xil_pn:name="blockram_10b1024.v"/>
+      <outfile xil_pn:name="cmp_unit.v"/>
+      <outfile xil_pn:name="cmp_unit_test.v"/>
+      <outfile xil_pn:name="compare.v"/>
+      <outfile xil_pn:name="compare_test.v"/>
+      <outfile xil_pn:name="count2tc_sync.vhd"/>
+      <outfile xil_pn:name="dcm_standby.vhd"/>
+      <outfile xil_pn:name="detector.vhd"/>
+      <outfile xil_pn:name="distmem.vhd"/>
+      <outfile xil_pn:name="distmem0.vhd"/>
+      <outfile xil_pn:name="dpbram.vhd"/>
+      <outfile xil_pn:name="dpbram0.vhd"/>
+      <outfile xil_pn:name="dpmem_pkg.vhd"/>
+      <outfile xil_pn:name="drp_robot.vhd"/>
+      <outfile xil_pn:name="fifo_pkg.vhd"/>
+      <outfile xil_pn:name="filter.v"/>
+      <outfile xil_pn:name="filter_unit.v"/>
+      <outfile xil_pn:name="lclk_dcm_v4.vhd"/>
+      <outfile xil_pn:name="localbus_pkg.vhd"/>
+      <outfile xil_pn:name="medianfilter.v"/>
+      <outfile xil_pn:name="medianfilter_test.v"/>
+      <outfile xil_pn:name="memclk-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memif_def_sim.vhd"/>
+      <outfile xil_pn:name="memif_int_pkg.vhd"/>
+      <outfile xil_pn:name="memif_pkg.vhd"/>
+      <outfile xil_pn:name="memory-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memory_banks-xrc4sx.vhd"/>
+      <outfile xil_pn:name="memory_common_pkg.vhd"/>
+      <outfile xil_pn:name="memory_main.vhd"/>
+      <outfile xil_pn:name="memory_test.vhd"/>
+      <outfile xil_pn:name="operation.v"/>
+      <outfile xil_pn:name="operation_test.v"/>
+      <outfile xil_pn:name="plxdssm.vhd"/>
+      <outfile xil_pn:name="pulse_sync.vhd"/>
+      <outfile xil_pn:name="reg_sync.vhd"/>
+      <outfile xil_pn:name="ringosc.vhd"/>
+      <outfile xil_pn:name="sobel_test.v"/>
+      <outfile xil_pn:name="sobelfilter.v"/>
+      <outfile xil_pn:name="sort_column.v"/>
+      <outfile xil_pn:name="sort_column_test.v"/>
+      <outfile xil_pn:name="spd_i2c.vhd"/>
+      <outfile xil_pn:name="sqrt.v"/>
+      <outfile xil_pn:name="sqrt_test.v"/>
+      <outfile xil_pn:name="standby.vhd"/>
+      <outfile xil_pn:name="standby_pkg.vhd"/>
+      <outfile xil_pn:name="user_app.vhd"/>
+      <outfile xil_pn:name="user_defs_pkg-xrc4sx.vhd"/>
+      <outfile xil_pn:name="user_reg_sync.vhd"/>
+      <outfile xil_pn:name="week3_distributedram.v"/>
+      <outfile xil_pn:name="week3_memory.v"/>
+      <outfile xil_pn:name="zbtsram_port.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1546874946" xil_pn:in_ck="-8310912755955239157" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7104405266118282018" xil_pn:start_ts="1546874941">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="operation_test_v_beh.prj"/>
+      <outfile xil_pn:name="operation_test_v_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1546874946" xil_pn:in_ck="-235857963217944649" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4372874267268248319" xil_pn:start_ts="1546874946">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="operation_test_v_isim_beh.wdb"/>
+    </transform>
+  </transforms>
 
 </generated_project>
