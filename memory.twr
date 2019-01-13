@@ -3,8 +3,8 @@ Release 9.2.04i Trace
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx92i\bin\nt\trce.exe -ise
-C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise -intstyle ise -e 3 -s 10
--xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
+C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise -intstyle ise -e
+3 -s 10 -xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
 
 Design file:              memory.ncd
 Physical constraint file: memory.pcf
@@ -99,21 +99,21 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: NET "lreset_l_IBUF" MAXDELAY = 100 ns;
 
  1 item analyzed, 0 timing errors detected.
- Maximum net delay is   4.607ns.
+ Maximum net delay is   5.073ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: NET "refclk_ibufg" PERIOD = 4.5 ns HIGH 50%;
 
  27 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   1.544ns.
+ Minimum period is   1.854ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: NET "lclk_dcm_0/lclk_ibufg" PERIOD = 14 ns HIGH 50%;
 
  2 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   1.265ns.
+ Minimum period is   1.228ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -121,15 +121,15 @@ Timing constraint: PERIOD analysis for net "lclk_dcm_0/dll_lclk/CLK0_NUB"
 derived from  NET "lclk_dcm_0/lclk_ibufg" PERIOD = 14 ns HIGH 50%;  duty cycle 
 corrected to 14 nS  HIGH 7 nS  
 
- 9018 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   9.325ns.
+ 9019 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.801ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: NET "mclk_ibufg" PERIOD = 5.5 ns HIGH 50%;
 
  2 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   1.248ns.
+ Minimum period is   1.049ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -138,14 +138,14 @@ Timing constraint: PERIOD analysis for net
 "mclk_ibufg" PERIOD = 5.5 ns HIGH 50%;  duty cycle corrected to 5.500 nS  HIGH 
 2.750 nS  
 
- 129689 items analyzed, 113 timing errors detected. (113 setup errors, 0 hold errors)
- Minimum period is   6.676ns.
+ 174829 items analyzed, 28 timing errors detected. (28 setup errors, 0 hold errors)
+ Minimum period is   5.992ns.
 --------------------------------------------------------------------------------
-Slack:                  -1.176ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               memory_main_0/user_app_0/filter0/ptr1_2 (FF)
-  Destination:          memory_main_0/user_app_0/filter0/ptr1_32 (FF)
+Slack:                  -0.492ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memory_main_0/user_app_0/image_size_1 (FF)
+  Destination:          memory_main_0/user_app_0/filter0/ptr0_32 (FF)
   Requirement:          5.500ns
-  Data Path Delay:      6.616ns (Levels of Logic = 25)
+  Data Path Delay:      5.932ns (Levels of Logic = 26)
   Clock Path Skew:      0.000ns
   Source Clock:         memory_main_0/user_clk rising at 0.000ns
   Destination Clock:    memory_main_0/user_clk rising at 5.500ns
@@ -157,121 +157,126 @@ Slack:                  -1.176ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.120ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: memory_main_0/user_app_0/filter0/ptr1_2 to memory_main_0/user_app_0/filter0/ptr1_32
+  Maximum Data Path: memory_main_0/user_app_0/image_size_1 to memory_main_0/user_app_0/filter0/ptr0_32
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X83Y145.XQ     Tcko                  0.340   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/ptr1_2
-    SLICE_X82Y147.F3     net (fanout=3)        1.015   memory_main_0/user_app_0/filter0/ptr1<2>
-    SLICE_X82Y147.COUT   Topcyf                0.576   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_lut<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.XB     Tcinxb                0.399   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.G3     net (fanout=9)        1.108   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.Y      Tilo                  0.194   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<16>1_4
-                                                       memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv1
-    SLICE_X83Y144.BX     net (fanout=1)        0.320   memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv
-    SLICE_X83Y144.COUT   Tbxcy                 0.502   memory_main_0/user_app_0/filter0/ptr1<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<30>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<30>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<31>
-    SLICE_X83Y160.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<31>
-    SLICE_X83Y160.CLK    Tcinck                0.427   memory_main_0/user_app_0/filter0/ptr1<32>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_xor<32>
-                                                       memory_main_0/user_app_0/filter0/ptr1_32
+    SLICE_X75Y131.XQ     Tcko                  0.340   memory_main_0/user_app_0/image_size<1>
+                                                       memory_main_0/user_app_0/image_size_1
+    SLICE_X79Y132.G3     net (fanout=7)        0.928   memory_main_0/user_app_0/image_size<1>
+    SLICE_X79Y132.COUT   Topcyg                0.559   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_lut<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>_rt
+    SLICE_X78Y131.G4     net (fanout=37)       1.098   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+    SLICE_X78Y131.COUT   Topcyg                0.561   memory_main_0/user_app_0/filter0/ptr0<0>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_lut<1>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<31>
+    SLICE_X78Y147.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<31>
+    SLICE_X78Y147.CLK    Tcinck                0.423   memory_main_0/user_app_0/filter0/ptr0<32>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_xor<32>
+                                                       memory_main_0/user_app_0/filter0/ptr0_32
     -------------------------------------------------  ---------------------------
-    Total                                      6.616ns (4.173ns logic, 2.443ns route)
-                                                       (63.1% logic, 36.9% route)
+    Total                                      5.932ns (3.906ns logic, 2.026ns route)
+                                                       (65.8% logic, 34.2% route)
 
 --------------------------------------------------------------------------------
-Slack:                  -1.142ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               memory_main_0/user_app_0/filter0/ptr1_2 (FF)
-  Destination:          memory_main_0/user_app_0/filter0/ptr1_31 (FF)
+Slack:                  -0.490ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memory_main_0/user_app_0/image_size_1 (FF)
+  Destination:          memory_main_0/user_app_0/filter0/ptr0_32 (FF)
   Requirement:          5.500ns
-  Data Path Delay:      6.582ns (Levels of Logic = 24)
+  Data Path Delay:      5.930ns (Levels of Logic = 26)
   Clock Path Skew:      0.000ns
   Source Clock:         memory_main_0/user_clk rising at 0.000ns
   Destination Clock:    memory_main_0/user_clk rising at 5.500ns
@@ -283,118 +288,127 @@ Slack:                  -1.142ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.120ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: memory_main_0/user_app_0/filter0/ptr1_2 to memory_main_0/user_app_0/filter0/ptr1_31
+  Maximum Data Path: memory_main_0/user_app_0/image_size_1 to memory_main_0/user_app_0/filter0/ptr0_32
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X83Y145.XQ     Tcko                  0.340   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/ptr1_2
-    SLICE_X82Y147.F3     net (fanout=3)        1.015   memory_main_0/user_app_0/filter0/ptr1<2>
-    SLICE_X82Y147.COUT   Topcyf                0.576   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_lut<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.XB     Tcinxb                0.399   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.G3     net (fanout=9)        1.108   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.Y      Tilo                  0.194   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<16>1_4
-                                                       memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv1
-    SLICE_X83Y144.BX     net (fanout=1)        0.320   memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv
-    SLICE_X83Y144.COUT   Tbxcy                 0.502   memory_main_0/user_app_0/filter0/ptr1<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.CLK    Tcinck                0.479   memory_main_0/user_app_0/filter0/ptr1<30>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<30>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_xor<31>
-                                                       memory_main_0/user_app_0/filter0/ptr1_31
+    SLICE_X75Y131.XQ     Tcko                  0.340   memory_main_0/user_app_0/image_size<1>
+                                                       memory_main_0/user_app_0/image_size_1
+    SLICE_X79Y132.G3     net (fanout=7)        0.928   memory_main_0/user_app_0/image_size<1>
+    SLICE_X79Y132.COUT   Topcyg                0.559   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_lut<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>_rt
+    SLICE_X78Y131.F4     net (fanout=37)       1.081   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+    SLICE_X78Y131.COUT   Topcyf                0.576   memory_main_0/user_app_0/filter0/ptr0<0>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_lut<0>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<0>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<31>
+    SLICE_X78Y147.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<31>
+    SLICE_X78Y147.CLK    Tcinck                0.423   memory_main_0/user_app_0/filter0/ptr0<32>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_xor<32>
+                                                       memory_main_0/user_app_0/filter0/ptr0_32
     -------------------------------------------------  ---------------------------
-    Total                                      6.582ns (4.139ns logic, 2.443ns route)
-                                                       (62.9% logic, 37.1% route)
+    Total                                      5.930ns (3.921ns logic, 2.009ns route)
+                                                       (66.1% logic, 33.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  -1.090ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               memory_main_0/user_app_0/filter0/ptr1_2 (FF)
-  Destination:          memory_main_0/user_app_0/filter0/ptr1_30 (FF)
+Slack:                  -0.458ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memory_main_0/user_app_0/image_size_1 (FF)
+  Destination:          memory_main_0/user_app_0/filter0/ptr0_31 (FF)
   Requirement:          5.500ns
-  Data Path Delay:      6.530ns (Levels of Logic = 24)
+  Data Path Delay:      5.898ns (Levels of Logic = 25)
   Clock Path Skew:      0.000ns
   Source Clock:         memory_main_0/user_clk rising at 0.000ns
   Destination Clock:    memory_main_0/user_clk rising at 5.500ns
@@ -406,110 +420,116 @@ Slack:                  -1.090ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.120ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path: memory_main_0/user_app_0/filter0/ptr1_2 to memory_main_0/user_app_0/filter0/ptr1_30
+  Maximum Data Path: memory_main_0/user_app_0/image_size_1 to memory_main_0/user_app_0/filter0/ptr0_31
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X83Y145.XQ     Tcko                  0.340   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/ptr1_2
-    SLICE_X82Y147.F3     net (fanout=3)        1.015   memory_main_0/user_app_0/filter0/ptr1<2>
-    SLICE_X82Y147.COUT   Topcyf                0.576   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_lut<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<3>
-    SLICE_X82Y148.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<5>
-    SLICE_X82Y149.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<7>
-    SLICE_X82Y150.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<9>
-    SLICE_X82Y151.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<11>
-    SLICE_X82Y152.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<13>
-    SLICE_X82Y153.XB     Tcinxb                0.399   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.G3     net (fanout=9)        1.108   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<14>
-    SLICE_X83Y142.Y      Tilo                  0.194   memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy<16>1_4
-                                                       memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv1
-    SLICE_X83Y144.BX     net (fanout=1)        0.320   memory_main_0/user_app_0/filter0/ptr1_cmp_eq0000_inv
-    SLICE_X83Y144.COUT   Tbxcy                 0.502   memory_main_0/user_app_0/filter0/ptr1<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<0>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<1>
-    SLICE_X83Y145.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<2>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<3>
-    SLICE_X83Y146.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<4>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<5>
-    SLICE_X83Y147.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<6>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<7>
-    SLICE_X83Y148.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<8>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<9>
-    SLICE_X83Y149.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<10>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<11>
-    SLICE_X83Y150.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<12>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<13>
-    SLICE_X83Y151.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<14>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<15>
-    SLICE_X83Y152.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<16>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<17>
-    SLICE_X83Y153.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<18>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<19>
-    SLICE_X83Y154.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<20>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<21>
-    SLICE_X83Y155.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<22>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<23>
-    SLICE_X83Y156.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<24>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<25>
-    SLICE_X83Y157.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<26>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<27>
-    SLICE_X83Y158.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/ptr1<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<28>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr1_cy<29>
-    SLICE_X83Y159.CLK    Tcinck                0.427   memory_main_0/user_app_0/filter0/ptr1<30>
-                                                       memory_main_0/user_app_0/filter0/Mcount_ptr1_xor<30>
-                                                       memory_main_0/user_app_0/filter0/ptr1_30
+    SLICE_X75Y131.XQ     Tcko                  0.340   memory_main_0/user_app_0/image_size<1>
+                                                       memory_main_0/user_app_0/image_size_1
+    SLICE_X79Y132.G3     net (fanout=7)        0.928   memory_main_0/user_app_0/image_size<1>
+    SLICE_X79Y132.COUT   Topcyg                0.559   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_lut<1>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<1>
+    SLICE_X79Y133.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<3>
+    SLICE_X79Y134.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<5>
+    SLICE_X79Y135.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<7>
+    SLICE_X79Y136.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<9>
+    SLICE_X79Y137.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<11>
+    SLICE_X79Y138.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<13>
+    SLICE_X79Y139.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<15>
+    SLICE_X79Y140.COUT   Tbyp                  0.086   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>_rt
+    SLICE_X78Y131.G4     net (fanout=37)       1.098   memory_main_0/user_app_0/filter0/Mcompar_ptr0_cmp_eq0000_cy<16>
+    SLICE_X78Y131.COUT   Topcyg                0.561   memory_main_0/user_app_0/filter0/ptr0<0>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_lut<1>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<1>
+    SLICE_X78Y132.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<2>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<3>
+    SLICE_X78Y133.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<4>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<5>
+    SLICE_X78Y134.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<6>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<7>
+    SLICE_X78Y135.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<8>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<9>
+    SLICE_X78Y136.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<10>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<11>
+    SLICE_X78Y137.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<12>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<13>
+    SLICE_X78Y138.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<14>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<15>
+    SLICE_X78Y139.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<16>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<17>
+    SLICE_X78Y140.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<18>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<19>
+    SLICE_X78Y141.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<20>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<21>
+    SLICE_X78Y142.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<22>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<23>
+    SLICE_X78Y143.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<24>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<25>
+    SLICE_X78Y144.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<26>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<27>
+    SLICE_X78Y145.COUT   Tbyp                  0.089   memory_main_0/user_app_0/filter0/ptr0<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<28>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.CIN    net (fanout=1)        0.000   memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<29>
+    SLICE_X78Y146.CLK    Tcinck                0.478   memory_main_0/user_app_0/filter0/ptr0<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_cy<30>
+                                                       memory_main_0/user_app_0/filter0/Mcount_ptr0_xor<31>
+                                                       memory_main_0/user_app_0/filter0/ptr0_31
     -------------------------------------------------  ---------------------------
-    Total                                      6.530ns (4.087ns logic, 2.443ns route)
-                                                       (62.6% logic, 37.4% route)
+    Total                                      5.898ns (3.872ns logic, 2.026ns route)
+                                                       (65.6% logic, 34.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -543,7 +563,7 @@ Timing constraint: TS_M_FFS_TO_L_FFS = MAXDELAY FROM TIMEGRP "MEMCLK_FFS" TO
 TIMEGRP "LCLK_FFS" 4         ns DATAPATHONLY;
 
  135 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Maximum delay is   1.932ns.
+ Maximum delay is   1.999ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -572,7 +592,7 @@ Timing constraint: TS_L_FFS_TO_M_FFS = MAXDELAY FROM TIMEGRP "LCLK_FFS" TO
 TIMEGRP "MEMCLK_FFS" 4         ns DATAPATHONLY;
 
  120 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Maximum delay is   3.426ns.
+ Maximum delay is   2.426ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -600,14 +620,14 @@ TIMEGRP         "MEMCLK_RAMS" 4 ns DATAPATHONLY;
 Timing constraint: TIMEGRP "LBUS_PADS" OFFSET = OUT 9.8 ns AFTER COMP "lclk";
 
  68 items analyzed, 0 timing errors detected.
- Minimum allowable offset is   6.692ns.
+ Minimum allowable offset is   6.258ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: TIMEGRP "LBUS_PADS" OFFSET = IN 6.8 ns BEFORE COMP "lclk";
 
  527 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum allowable offset is   6.775ns.
+ Minimum allowable offset is   6.663ns.
 --------------------------------------------------------------------------------
 
 
@@ -623,14 +643,14 @@ Setup/Hold to clock lclk
             |  Setup to  |  Hold to   |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-fholda      |    6.775(R)|   -2.934(R)|clk               |   0.000|
-la<2>       |    5.848(R)|   -0.713(R)|clk               |   0.000|
-la<3>       |    5.798(R)|   -0.711(R)|clk               |   0.000|
-la<4>       |    5.786(R)|   -0.720(R)|clk               |   0.000|
-la<5>       |    5.408(R)|   -0.767(R)|clk               |   0.000|
-la<6>       |    5.205(R)|   -0.771(R)|clk               |   0.000|
-la<7>       |    5.521(R)|   -0.713(R)|clk               |   0.000|
-la<8>       |    5.773(R)|   -0.697(R)|clk               |   0.000|
+fholda      |    6.398(R)|   -2.638(R)|clk               |   0.000|
+la<2>       |    5.177(R)|   -0.713(R)|clk               |   0.000|
+la<3>       |    5.582(R)|   -0.711(R)|clk               |   0.000|
+la<4>       |    5.649(R)|   -0.720(R)|clk               |   0.000|
+la<5>       |    4.727(R)|   -0.767(R)|clk               |   0.000|
+la<6>       |    5.285(R)|   -0.771(R)|clk               |   0.000|
+la<7>       |    6.409(R)|   -0.713(R)|clk               |   0.000|
+la<8>       |    5.662(R)|   -0.697(R)|clk               |   0.000|
 la<9>       |    1.554(R)|   -0.750(R)|clk               |   0.000|
 la<10>      |    1.542(R)|   -0.739(R)|clk               |   0.000|
 la<11>      |    1.551(R)|   -0.746(R)|clk               |   0.000|
@@ -643,15 +663,15 @@ la<17>      |    1.580(R)|   -0.777(R)|clk               |   0.000|
 la<18>      |    1.528(R)|   -0.742(R)|clk               |   0.000|
 la<19>      |    1.585(R)|   -0.792(R)|clk               |   0.000|
 la<20>      |    1.587(R)|   -0.794(R)|clk               |   0.000|
-la<21>      |    6.339(R)|   -0.810(R)|clk               |   0.000|
-la<23>      |    6.326(R)|   -2.519(R)|clk               |   0.000|
-lads_l      |    6.630(R)|   -2.078(R)|clk               |   0.000|
+la<21>      |    6.391(R)|   -0.810(R)|clk               |   0.000|
+la<23>      |    6.474(R)|   -2.706(R)|clk               |   0.000|
+lads_l      |    6.141(R)|   -2.075(R)|clk               |   0.000|
 lbe_l<0>    |    1.467(R)|   -0.654(R)|clk               |   0.000|
 lbe_l<1>    |    1.475(R)|   -0.660(R)|clk               |   0.000|
 lbe_l<2>    |    1.469(R)|   -0.655(R)|clk               |   0.000|
 lbe_l<3>    |    1.471(R)|   -0.657(R)|clk               |   0.000|
-lblast_l    |    6.135(R)|   -2.245(R)|clk               |   0.000|
-lbterm_l    |    6.169(R)|   -2.277(R)|clk               |   0.000|
+lblast_l    |    6.592(R)|   -2.107(R)|clk               |   0.000|
+lbterm_l    |    6.663(R)|   -2.173(R)|clk               |   0.000|
 ld<0>       |    1.532(R)|   -0.732(R)|clk               |   0.000|
 ld<1>       |    1.522(R)|   -0.726(R)|clk               |   0.000|
 ld<2>       |    1.519(R)|   -0.723(R)|clk               |   0.000|
@@ -792,8 +812,8 @@ rd3<0>      |    0.092(R)|    0.613(R)|memory_main_0/user_clk|   0.000|
 rd3<1>      |    0.095(R)|    0.610(R)|memory_main_0/user_clk|   0.000|
 rd3<2>      |    0.092(R)|    0.612(R)|memory_main_0/user_clk|   0.000|
 rd3<3>      |    0.081(R)|    0.621(R)|memory_main_0/user_clk|   0.000|
-rd3<4>      |    0.112(R)|    0.593(R)|memory_main_0/user_clk|   0.000|
-rd3<5>      |    0.104(R)|    0.600(R)|memory_main_0/user_clk|   0.000|
+rd3<4>      |    0.112(R)|    0.594(R)|memory_main_0/user_clk|   0.000|
+rd3<5>      |    0.104(R)|    0.601(R)|memory_main_0/user_clk|   0.000|
 rd3<6>      |    0.044(R)|    0.652(R)|memory_main_0/user_clk|   0.000|
 rd3<7>      |    0.035(R)|    0.660(R)|memory_main_0/user_clk|   0.000|
 rd3<8>      |    0.129(R)|    0.577(R)|memory_main_0/user_clk|   0.000|
@@ -814,8 +834,8 @@ rd3<22>     |    0.067(R)|    0.630(R)|memory_main_0/user_clk|   0.000|
 rd3<23>     |    0.077(R)|    0.621(R)|memory_main_0/user_clk|   0.000|
 rd3<24>     |    0.109(R)|    0.596(R)|memory_main_0/user_clk|   0.000|
 rd3<25>     |    0.113(R)|    0.593(R)|memory_main_0/user_clk|   0.000|
-rd3<26>     |    0.097(R)|    0.606(R)|memory_main_0/user_clk|   0.000|
-rd3<27>     |    0.097(R)|    0.606(R)|memory_main_0/user_clk|   0.000|
+rd3<26>     |    0.097(R)|    0.607(R)|memory_main_0/user_clk|   0.000|
+rd3<27>     |    0.097(R)|    0.607(R)|memory_main_0/user_clk|   0.000|
 rd3<28>     |    0.072(R)|    0.629(R)|memory_main_0/user_clk|   0.000|
 rd3<29>     |    0.062(R)|    0.637(R)|memory_main_0/user_clk|   0.000|
 rd3<30>     |    0.109(R)|    0.599(R)|memory_main_0/user_clk|   0.000|
@@ -927,8 +947,8 @@ rd3<0>      |    0.099(R)|    0.604(R)|memory_main_0/user_clk|   0.000|
 rd3<1>      |    0.102(R)|    0.601(R)|memory_main_0/user_clk|   0.000|
 rd3<2>      |    0.099(R)|    0.603(R)|memory_main_0/user_clk|   0.000|
 rd3<3>      |    0.088(R)|    0.612(R)|memory_main_0/user_clk|   0.000|
-rd3<4>      |    0.119(R)|    0.584(R)|memory_main_0/user_clk|   0.000|
-rd3<5>      |    0.111(R)|    0.591(R)|memory_main_0/user_clk|   0.000|
+rd3<4>      |    0.119(R)|    0.585(R)|memory_main_0/user_clk|   0.000|
+rd3<5>      |    0.111(R)|    0.592(R)|memory_main_0/user_clk|   0.000|
 rd3<6>      |    0.051(R)|    0.643(R)|memory_main_0/user_clk|   0.000|
 rd3<7>      |    0.042(R)|    0.651(R)|memory_main_0/user_clk|   0.000|
 rd3<8>      |    0.136(R)|    0.568(R)|memory_main_0/user_clk|   0.000|
@@ -949,8 +969,8 @@ rd3<22>     |    0.074(R)|    0.621(R)|memory_main_0/user_clk|   0.000|
 rd3<23>     |    0.084(R)|    0.612(R)|memory_main_0/user_clk|   0.000|
 rd3<24>     |    0.116(R)|    0.587(R)|memory_main_0/user_clk|   0.000|
 rd3<25>     |    0.120(R)|    0.584(R)|memory_main_0/user_clk|   0.000|
-rd3<26>     |    0.104(R)|    0.597(R)|memory_main_0/user_clk|   0.000|
-rd3<27>     |    0.104(R)|    0.597(R)|memory_main_0/user_clk|   0.000|
+rd3<26>     |    0.104(R)|    0.598(R)|memory_main_0/user_clk|   0.000|
+rd3<27>     |    0.104(R)|    0.598(R)|memory_main_0/user_clk|   0.000|
 rd3<28>     |    0.079(R)|    0.620(R)|memory_main_0/user_clk|   0.000|
 rd3<29>     |    0.069(R)|    0.628(R)|memory_main_0/user_clk|   0.000|
 rd3<30>     |    0.116(R)|    0.590(R)|memory_main_0/user_clk|   0.000|
@@ -963,38 +983,38 @@ Clock lclk to Pad
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
 lbterm_l    |    3.262(R)|clk               |   0.000|
-ld<0>       |    6.692(R)|clk               |   0.000|
-ld<1>       |    6.433(R)|clk               |   0.000|
-ld<2>       |    6.254(R)|clk               |   0.000|
-ld<3>       |    6.001(R)|clk               |   0.000|
-ld<4>       |    5.600(R)|clk               |   0.000|
-ld<5>       |    5.706(R)|clk               |   0.000|
-ld<6>       |    5.167(R)|clk               |   0.000|
-ld<7>       |    5.865(R)|clk               |   0.000|
-ld<8>       |    5.805(R)|clk               |   0.000|
-ld<9>       |    5.685(R)|clk               |   0.000|
-ld<10>      |    5.651(R)|clk               |   0.000|
-ld<11>      |    5.428(R)|clk               |   0.000|
-ld<12>      |    5.648(R)|clk               |   0.000|
-ld<13>      |    5.328(R)|clk               |   0.000|
-ld<14>      |    4.937(R)|clk               |   0.000|
-ld<15>      |    4.961(R)|clk               |   0.000|
-ld<16>      |    5.167(R)|clk               |   0.000|
-ld<17>      |    5.306(R)|clk               |   0.000|
-ld<18>      |    5.520(R)|clk               |   0.000|
-ld<19>      |    5.256(R)|clk               |   0.000|
-ld<20>      |    5.286(R)|clk               |   0.000|
-ld<21>      |    5.556(R)|clk               |   0.000|
-ld<22>      |    5.245(R)|clk               |   0.000|
-ld<23>      |    5.358(R)|clk               |   0.000|
-ld<24>      |    5.191(R)|clk               |   0.000|
-ld<25>      |    4.995(R)|clk               |   0.000|
-ld<26>      |    4.995(R)|clk               |   0.000|
-ld<27>      |    5.181(R)|clk               |   0.000|
-ld<28>      |    4.849(R)|clk               |   0.000|
-ld<29>      |    5.099(R)|clk               |   0.000|
-ld<30>      |    5.172(R)|clk               |   0.000|
-ld<31>      |    4.775(R)|clk               |   0.000|
+ld<0>       |    6.199(R)|clk               |   0.000|
+ld<1>       |    6.258(R)|clk               |   0.000|
+ld<2>       |    6.009(R)|clk               |   0.000|
+ld<3>       |    5.626(R)|clk               |   0.000|
+ld<4>       |    5.502(R)|clk               |   0.000|
+ld<5>       |    5.439(R)|clk               |   0.000|
+ld<6>       |    5.307(R)|clk               |   0.000|
+ld<7>       |    6.034(R)|clk               |   0.000|
+ld<8>       |    5.407(R)|clk               |   0.000|
+ld<9>       |    5.246(R)|clk               |   0.000|
+ld<10>      |    4.903(R)|clk               |   0.000|
+ld<11>      |    4.882(R)|clk               |   0.000|
+ld<12>      |    4.742(R)|clk               |   0.000|
+ld<13>      |    4.637(R)|clk               |   0.000|
+ld<14>      |    4.668(R)|clk               |   0.000|
+ld<15>      |    4.649(R)|clk               |   0.000|
+ld<16>      |    5.491(R)|clk               |   0.000|
+ld<17>      |    5.620(R)|clk               |   0.000|
+ld<18>      |    5.501(R)|clk               |   0.000|
+ld<19>      |    5.463(R)|clk               |   0.000|
+ld<20>      |    5.930(R)|clk               |   0.000|
+ld<21>      |    5.084(R)|clk               |   0.000|
+ld<22>      |    6.056(R)|clk               |   0.000|
+ld<23>      |    5.761(R)|clk               |   0.000|
+ld<24>      |    5.035(R)|clk               |   0.000|
+ld<25>      |    4.824(R)|clk               |   0.000|
+ld<26>      |    4.426(R)|clk               |   0.000|
+ld<27>      |    4.498(R)|clk               |   0.000|
+ld<28>      |    5.158(R)|clk               |   0.000|
+ld<29>      |    4.828(R)|clk               |   0.000|
+ld<30>      |    4.641(R)|clk               |   0.000|
+ld<31>      |    4.442(R)|clk               |   0.000|
 lready_l    |    3.274(R)|clk               |   0.000|
 ------------+------------+------------------+--------+
 
@@ -1219,8 +1239,8 @@ rd3<0>      |    4.540(R)|memory_main_0/user_clk|   0.000|
 rd3<1>      |    4.543(R)|memory_main_0/user_clk|   0.000|
 rd3<2>      |    4.537(R)|memory_main_0/user_clk|   0.000|
 rd3<3>      |    4.526(R)|memory_main_0/user_clk|   0.000|
-rd3<4>      |    4.552(R)|memory_main_0/user_clk|   0.000|
-rd3<5>      |    4.544(R)|memory_main_0/user_clk|   0.000|
+rd3<4>      |    4.553(R)|memory_main_0/user_clk|   0.000|
+rd3<5>      |    4.545(R)|memory_main_0/user_clk|   0.000|
 rd3<6>      |    4.479(R)|memory_main_0/user_clk|   0.000|
 rd3<7>      |    4.470(R)|memory_main_0/user_clk|   0.000|
 rd3<8>      |    4.558(R)|memory_main_0/user_clk|   0.000|
@@ -1241,8 +1261,8 @@ rd3<22>     |    4.496(R)|memory_main_0/user_clk|   0.000|
 rd3<23>     |    4.506(R)|memory_main_0/user_clk|   0.000|
 rd3<24>     |    4.544(R)|memory_main_0/user_clk|   0.000|
 rd3<25>     |    4.548(R)|memory_main_0/user_clk|   0.000|
-rd3<26>     |    4.537(R)|memory_main_0/user_clk|   0.000|
-rd3<27>     |    4.537(R)|memory_main_0/user_clk|   0.000|
+rd3<26>     |    4.538(R)|memory_main_0/user_clk|   0.000|
+rd3<27>     |    4.538(R)|memory_main_0/user_clk|   0.000|
 rd3<28>     |    4.517(R)|memory_main_0/user_clk|   0.000|
 rd3<29>     |    4.507(R)|memory_main_0/user_clk|   0.000|
 rd3<30>     |    4.557(R)|memory_main_0/user_clk|   0.000|
@@ -1470,8 +1490,8 @@ rd3<0>      |    4.531(R)|memory_main_0/user_clk|   0.000|
 rd3<1>      |    4.534(R)|memory_main_0/user_clk|   0.000|
 rd3<2>      |    4.528(R)|memory_main_0/user_clk|   0.000|
 rd3<3>      |    4.517(R)|memory_main_0/user_clk|   0.000|
-rd3<4>      |    4.543(R)|memory_main_0/user_clk|   0.000|
-rd3<5>      |    4.535(R)|memory_main_0/user_clk|   0.000|
+rd3<4>      |    4.544(R)|memory_main_0/user_clk|   0.000|
+rd3<5>      |    4.536(R)|memory_main_0/user_clk|   0.000|
 rd3<6>      |    4.470(R)|memory_main_0/user_clk|   0.000|
 rd3<7>      |    4.461(R)|memory_main_0/user_clk|   0.000|
 rd3<8>      |    4.549(R)|memory_main_0/user_clk|   0.000|
@@ -1492,8 +1512,8 @@ rd3<22>     |    4.487(R)|memory_main_0/user_clk|   0.000|
 rd3<23>     |    4.497(R)|memory_main_0/user_clk|   0.000|
 rd3<24>     |    4.535(R)|memory_main_0/user_clk|   0.000|
 rd3<25>     |    4.539(R)|memory_main_0/user_clk|   0.000|
-rd3<26>     |    4.528(R)|memory_main_0/user_clk|   0.000|
-rd3<27>     |    4.528(R)|memory_main_0/user_clk|   0.000|
+rd3<26>     |    4.529(R)|memory_main_0/user_clk|   0.000|
+rd3<27>     |    4.529(R)|memory_main_0/user_clk|   0.000|
 rd3<28>     |    4.508(R)|memory_main_0/user_clk|   0.000|
 rd3<29>     |    4.498(R)|memory_main_0/user_clk|   0.000|
 rd3<30>     |    4.548(R)|memory_main_0/user_clk|   0.000|
@@ -1505,9 +1525,9 @@ Clock to Setup on destination clock lclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-lclk           |    9.325|         |         |    1.038|
-mclk_n         |    1.932|         |         |         |
-mclk_p         |    1.932|         |         |         |
+lclk           |    8.801|         |         |    1.228|
+mclk_n         |    1.999|         |         |         |
+mclk_p         |    1.999|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mclk_n
@@ -1515,9 +1535,9 @@ Clock to Setup on destination clock mclk_n
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-lclk           |    3.957|         |         |         |
-mclk_n         |    6.676|         |         |    1.188|
-mclk_p         |    6.676|         |         |    1.188|
+lclk           |    2.706|         |         |         |
+mclk_n         |    5.992|         |         |    1.049|
+mclk_p         |    5.992|         |         |    1.049|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mclk_p
@@ -1525,9 +1545,9 @@ Clock to Setup on destination clock mclk_p
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-lclk           |    3.957|         |         |         |
-mclk_n         |    6.676|         |         |    1.188|
-mclk_p         |    6.676|         |         |    1.188|
+lclk           |    2.706|         |         |         |
+mclk_n         |    5.992|         |         |    1.049|
+mclk_p         |    5.992|         |         |    1.049|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock refclk_n
@@ -1535,8 +1555,8 @@ Clock to Setup on destination clock refclk_n
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-refclk_n       |    1.544|         |         |         |
-refclk_p       |    1.544|         |         |         |
+refclk_n       |    1.854|         |         |         |
+refclk_p       |    1.854|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock refclk_p
@@ -1544,48 +1564,48 @@ Clock to Setup on destination clock refclk_p
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-refclk_n       |    1.544|         |         |         |
-refclk_p       |    1.544|         |         |         |
+refclk_n       |    1.854|         |         |         |
+refclk_p       |    1.854|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 TIMEGRP "LBUS_PADS" OFFSET = OUT 9.8 ns AFTER COMP "lclk";
-Largest slack: 6.538 ns; Smallest slack: 3.108 ns; Relative Skew: 3.430 ns; 
+Largest slack: 6.538 ns; Smallest slack: 3.542 ns; Relative Skew: 2.996 ns; 
 -----------------------------------------------+-------------+-------------+
 PAD                                            |    Slack    |Relative Skew|
 -----------------------------------------------+-------------+-------------+
 lbterm_l                                       |        6.538|        0.000|
-ld<0>                                          |        3.108|        3.430|
-ld<1>                                          |        3.367|        3.171|
-ld<2>                                          |        3.546|        2.992|
-ld<3>                                          |        3.799|        2.739|
-ld<4>                                          |        4.200|        2.338|
-ld<5>                                          |        4.094|        2.444|
-ld<6>                                          |        4.633|        1.905|
-ld<7>                                          |        3.935|        2.603|
-ld<8>                                          |        3.995|        2.543|
-ld<9>                                          |        4.115|        2.423|
-ld<10>                                         |        4.149|        2.389|
-ld<11>                                         |        4.372|        2.166|
-ld<12>                                         |        4.152|        2.386|
-ld<13>                                         |        4.472|        2.066|
-ld<14>                                         |        4.863|        1.675|
-ld<15>                                         |        4.839|        1.699|
-ld<16>                                         |        4.633|        1.905|
-ld<17>                                         |        4.494|        2.044|
-ld<18>                                         |        4.280|        2.258|
-ld<19>                                         |        4.544|        1.994|
-ld<20>                                         |        4.514|        2.024|
-ld<21>                                         |        4.244|        2.294|
-ld<22>                                         |        4.555|        1.983|
-ld<23>                                         |        4.442|        2.096|
-ld<24>                                         |        4.609|        1.929|
-ld<25>                                         |        4.805|        1.733|
-ld<26>                                         |        4.805|        1.733|
-ld<27>                                         |        4.619|        1.919|
-ld<28>                                         |        4.951|        1.587|
-ld<29>                                         |        4.701|        1.837|
-ld<30>                                         |        4.628|        1.910|
-ld<31>                                         |        5.025|        1.513|
+ld<0>                                          |        3.601|        2.937|
+ld<1>                                          |        3.542|        2.996|
+ld<2>                                          |        3.791|        2.747|
+ld<3>                                          |        4.174|        2.364|
+ld<4>                                          |        4.298|        2.240|
+ld<5>                                          |        4.361|        2.177|
+ld<6>                                          |        4.493|        2.045|
+ld<7>                                          |        3.766|        2.772|
+ld<8>                                          |        4.393|        2.145|
+ld<9>                                          |        4.554|        1.984|
+ld<10>                                         |        4.897|        1.641|
+ld<11>                                         |        4.918|        1.620|
+ld<12>                                         |        5.058|        1.480|
+ld<13>                                         |        5.163|        1.375|
+ld<14>                                         |        5.132|        1.406|
+ld<15>                                         |        5.151|        1.387|
+ld<16>                                         |        4.309|        2.229|
+ld<17>                                         |        4.180|        2.358|
+ld<18>                                         |        4.299|        2.239|
+ld<19>                                         |        4.337|        2.201|
+ld<20>                                         |        3.870|        2.668|
+ld<21>                                         |        4.716|        1.822|
+ld<22>                                         |        3.744|        2.794|
+ld<23>                                         |        4.039|        2.499|
+ld<24>                                         |        4.765|        1.773|
+ld<25>                                         |        4.976|        1.562|
+ld<26>                                         |        5.374|        1.164|
+ld<27>                                         |        5.302|        1.236|
+ld<28>                                         |        4.642|        1.896|
+ld<29>                                         |        4.972|        1.566|
+ld<30>                                         |        5.159|        1.379|
+ld<31>                                         |        5.358|        1.180|
 lready_l                                       |        6.526|        0.012|
 -----------------------------------------------+-------------+-------------+
 
@@ -1593,26 +1613,26 @@ lready_l                                       |        6.526|        0.012|
 Timing summary:
 ---------------
 
-Timing errors: 113  Score: 44373
+Timing errors: 28  Score: 5351
 
-Constraints cover 140088 paths, 1 nets, and 14180 connections
+Constraints cover 185229 paths, 1 nets, and 27873 connections
 
 Design statistics:
-   Minimum period:   9.325ns   (Maximum frequency: 107.239MHz)
-   Maximum path delay from/to any node:   3.426ns
-   Maximum net delay:   4.607ns
-   Minimum input required time before clock:   6.775ns
-   Minimum output required time after clock:   6.692ns
+   Minimum period:   8.801ns   (Maximum frequency: 113.623MHz)
+   Maximum path delay from/to any node:   3.180ns
+   Maximum net delay:   5.073ns
+   Minimum input required time before clock:   6.663ns
+   Minimum output required time after clock:   6.258ns
 
 
-Analysis completed TUE 27 NOV 17:56:9 2018 
+Analysis completed TUE 8 JAN 17:49:26 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 331 MB
+Peak Memory Usage: 389 MB
 
 
 

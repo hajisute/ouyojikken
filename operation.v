@@ -130,6 +130,7 @@ module operation	#(
 		.in5(tmp[6]),
 		.in6(tmp[7]),	
 		.out(median_of_median_wire[1][0])
+//		.out(pixel_out_wire)
 	);
 
   
@@ -168,6 +169,7 @@ module operation	#(
 			end
 		end else begin
 			pixel_out <= pixel_out_wire;
+			tag_out <= tag_out_wire;
 			median_of_median[0][0] <= median_of_median_wire[0][0];
 			median_of_median[0][1] <= median_of_median_wire[0][1];
 			median_of_median[0][2] <= median_of_median_wire[0][2];
@@ -191,12 +193,6 @@ module operation	#(
 	
 	//sobelfilter呼び出し
 	sobelfilter #(
-		.TAG_WIDTH(2),
-		.INVALID_TAG(2'd0),
-		.DATA_TAG0(2'd1),
-		.DATA_TAG1(2'd2),
-		.DATA_END_TAG(2'd3),
-		.OPE_WIDTH(3),
 		.DATA_WIDTH(8 + TAG_WIDTH)
 	)sobelfiter0(
 		.clk(clk),
@@ -218,7 +214,7 @@ module operation	#(
 	Queue2 #(//パラメータの宣言
 		.WIDTH(2),
 		.INIT(8'b0),
-		.DEPTH(10)//?
+		.DEPTH(40)//?
 	) queue_for_tag(//入出力ポートの宣言
 		.out(tag_out_wire),
 		.in(tag_in),

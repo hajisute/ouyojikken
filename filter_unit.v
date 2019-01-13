@@ -27,7 +27,6 @@ module filter_unit	#(
 	//出力画素10b（tag[2b]+pixel[8b]）
 	output [DATA_WIDTH-1:0] data_out
 );
-	wire [DATA_WIDTH -1 :0] data_out_wire;
 	//for文用の変数宣言
 	integer	i,j;
 
@@ -47,8 +46,6 @@ module filter_unit	#(
 	//OPE_SIZE^2のdata(10b)
 	wire [DATA_WIDTH*OPE_WIDTH*OPE_WIDTH-1:0] data_bus;
 
-
-	
 	//generate文用変数の宣言
 	genvar x,y;
 	//databusとdataの対応付け
@@ -67,6 +64,7 @@ module filter_unit	#(
 		if(rst|refresh) begin
 			raddr <= 0;
 			waddr <= 0;
+
 			//dataレジスタの初期化
 			for(i = 0; i < OPE_WIDTH; i = i + 1) begin // i++, ++iとは記述できない
 				for(j = 0; j < OPE_WIDTH; j = j + 1) begin
@@ -75,7 +73,6 @@ module filter_unit	#(
 			end
 		end
 		else begin
-			data_out <= data_out_wire;
 			/////////////////////////////////////////////////////////
 			//OPE_WIDTH×OPE_WIDTHシフトレジスタ
 			//特に用がなければ触らない
@@ -126,7 +123,7 @@ module filter_unit	#(
 		.clk (clk),
 		.rst (rst),
 		.refresh(refresh),
-		.out (data_out_wire)
+		.out (data_out)
 	);
 
 	

@@ -11,7 +11,7 @@
 <msg type="warning" file="LIT" num="243" delta="unknown" >Logical network <arg fmt="%s" index="1">la&lt;31&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="LIT" num="395" delta="unknown" >The above <arg fmt="%s" index="1">warning</arg> message <arg fmt="%s" index="2">base_net_load_rule</arg> is repeated <arg fmt="%d" index="3">61</arg> more times for the following (max. 5 shown):
+<msg type="warning" file="LIT" num="395" delta="unknown" >The above <arg fmt="%s" index="1">warning</arg> message <arg fmt="%s" index="2">base_net_load_rule</arg> is repeated <arg fmt="%d" index="3">45</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="4">la&lt;30&gt;_IBUF,
 la&lt;29&gt;_IBUF,
 la&lt;28&gt;_IBUF,
@@ -177,6 +177,11 @@ To see the details of these <arg fmt="%s" index="5">warning</arg> messages, plea
 </msg>
 
 <msg type="warning" file="MapLib" num="46" delta="unknown" >The user-defined group &quot;<arg fmt="%s" index="1">RD5_PADS</arg>&quot; has been discarded, because all of its included elements were optimized out of the design.
+</msg>
+
+<msg type="warning" file="Pack" num="249" delta="unknown" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.
+	<arg fmt="%s" index="1">memory_main_0/user_app_0/filter0/Mcompar_ptr1_cmp_eq0000_cy&lt;16&gt;</arg>
+	<arg fmt="%s" index="2">memory_main_0/user_app_0/filter0/Mcount_ptr1_cy&lt;0&gt;</arg>
 </msg>
 
 <msg type="warning" file="Pack" num="249" delta="unknown" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.

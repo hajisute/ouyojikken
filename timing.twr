@@ -7,12 +7,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-* PERIOD analysis for net "memory_main_0/me | SETUP   |    -1.176ns|     6.676ns|     113|       44373
-  mory_banks_0/memclk_0/dll_memclk/CLK0_NUB | HOLD    |     0.349ns|            |       0|           0
+* PERIOD analysis for net "memory_main_0/me | SETUP   |    -0.475ns|     5.975ns|      33|        6608
+  mory_banks_0/memclk_0/dll_memclk/CLK0_NUB | HOLD    |     0.378ns|            |       0|           0
   " derived from  NET "mclk_ibufg" PERIOD = |         |            |            |        |            
    5.5 ns HIGH 50%                          |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "LBUS_PADS" OFFSET = IN 6.8 ns BE | SETUP   |     0.019ns|     6.781ns|       0|           0
+  TIMEGRP "LBUS_PADS" OFFSET = IN 6.8 ns BE | SETUP   |     0.111ns|     6.689ns|       0|           0
   FORE COMP "lclk"                          |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
   TS_SRAM_PADS_FFS = MAXDELAY FROM TIMEGRP  | SETUP   |     0.347ns|     1.153ns|       0|           0
@@ -23,31 +23,31 @@ Asterisk (*) preceding a constraint indicates it was not met.
   "MEMCLK_FFS" TO TIMEGRP "MEM_PADS"        |         |            |            |        |            
     3.5 ns                                  |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_L_FFS_TO_M_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     0.574ns|     3.426ns|       0|           0
+  TS_L_FFS_TO_M_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     1.574ns|     2.426ns|       0|           0
    "LCLK_FFS" TO TIMEGRP "MEMCLK_FFS" 4     |         |            |            |        |            
        ns DATAPATHONLY                      |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_M_FFS_TO_L_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     2.068ns|     1.932ns|       0|           0
+  TS_M_FFS_TO_L_FFS = MAXDELAY FROM TIMEGRP | SETUP   |     2.001ns|     1.999ns|       0|           0
    "MEMCLK_FFS" TO TIMEGRP "LCLK_FFS" 4     |         |            |            |        |            
        ns DATAPATHONLY                      |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  NET "refclk_ibufg" PERIOD = 4.5 ns HIGH 5 | SETUP   |     2.956ns|     1.544ns|       0|           0
-  0%                                        | HOLD    |     0.522ns|            |       0|           0
+  NET "refclk_ibufg" PERIOD = 4.5 ns HIGH 5 | SETUP   |     2.646ns|     1.854ns|       0|           0
+  0%                                        | HOLD    |     0.521ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "LBUS_PADS" OFFSET = OUT 9.8 ns A | MAXDELAY|     3.245ns|     6.555ns|       0|           0
+  TIMEGRP "LBUS_PADS" OFFSET = OUT 9.8 ns A | MAXDELAY|     3.663ns|     6.137ns|       0|           0
   FTER COMP "lclk"                          |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  NET "mclk_ibufg" PERIOD = 5.5 ns HIGH 50% | SETUP   |     4.252ns|     1.248ns|       0|           0
-                                            | HOLD    |     0.471ns|            |       0|           0
+  NET "mclk_ibufg" PERIOD = 5.5 ns HIGH 50% | SETUP   |     4.451ns|     1.049ns|       0|           0
+                                            | HOLD    |     0.410ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "lclk_dcm_0/dll_l | SETUP   |     4.675ns|     9.325ns|       0|           0
-  clk/CLK0_NUB" derived from  NET "lclk_dcm | HOLD    |     0.341ns|            |       0|           0
+  PERIOD analysis for net "lclk_dcm_0/dll_l | SETUP   |     5.199ns|     8.801ns|       0|           0
+  clk/CLK0_NUB" derived from  NET "lclk_dcm | HOLD    |     0.346ns|            |       0|           0
   _0/lclk_ibufg" PERIOD = 14 ns HIGH 50%    |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  NET "lclk_dcm_0/lclk_ibufg" PERIOD = 14 n | SETUP   |    12.735ns|     1.265ns|       0|           0
-  s HIGH 50%                                | HOLD    |     0.454ns|            |       0|           0
+  NET "lclk_dcm_0/lclk_ibufg" PERIOD = 14 n | SETUP   |    12.772ns|     1.228ns|       0|           0
+  s HIGH 50%                                | HOLD    |     0.483ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  NET "lreset_l_IBUF" MAXDELAY = 100 ns     | MAXDELAY|    95.393ns|     4.607ns|       0|           0
+  NET "lreset_l_IBUF" MAXDELAY = 100 ns     | MAXDELAY|    94.927ns|     5.073ns|       0|           0
 ------------------------------------------------------------------------------------------------------
   PERIOD analysis for net "memory_main_0/me | N/A     |         N/A|         N/A|     N/A|         N/A
   mory_banks_0/memclk_0/dll_ramclk0/CLK0_NU |         |            |            |        |            

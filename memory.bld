@@ -2,14 +2,16 @@ Release 9.2.04i ngdbuild J.40
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx92i\bin\nt\ngdbuild.exe -ise
-C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise -intstyle ise -dd _ngo -nt
-timestamp -uc memory-xrc4sx.ucf -p xc4vsx55-ff1148-10 memory.ngc memory.ngd
+C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise -intstyle ise -dd
+_ngo -nt timestamp -uc memory-xrc4sx.ucf -p xc4vsx55-ff1148-10 memory.ngc
+memory.ngd
 
-Reading NGO file "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ngc" ...
+Reading NGO file
+"C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ngc" ...
 Loading design module
-"C:\Users\FPGA\Desktop\fpga-filter-hardware/week3_memory.ngc"...
+"C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127/week3_memory.ngc"...
 Loading design module
-"C:\Users\FPGA\Desktop\fpga-filter-hardware/blockram_10b1024.ngc"...
+"C:\Users\FPGA\Desktop\fpga-filter-hardware-20181127/blockram_10b1024.ngc"...
 
 Applying constraints in "memory-xrc4sx.ucf" to the design...
 
@@ -48,7 +50,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   2
 
-Total memory usage is 123536 kilobytes
+Total memory usage is 133904 kilobytes
 
 Writing NGD file "memory.ngd" ...
 

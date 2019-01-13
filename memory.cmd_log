@@ -1,6 +1,19 @@
-xst -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -intstyle ise -ifn memory.xst -ofn memory.syr
-ngdbuild -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -intstyle ise -dd _ngo -nt timestamp -uc "memory-xrc4sx.ucf" -p xc4vsx55-ff1148-10 "memory.ngc" memory.ngd
-map -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -intstyle ise -p xc4vsx55-ff1148-10 -cm area -pr b -k 4 -c 100 -o memory_map.ncd memory.ngd memory.pcf
-par -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -w -intstyle ise -ol std -t 1 memory_map.ncd memory.ncd memory.pcf
-trce -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -intstyle ise -e 3 -s 10 -xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
-bitgen -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware/memory.ise" -intstyle ise -f memory.ut memory.ncd
+xst -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -ifn memory.xst -ofn memory.syr
+ngdbuild -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -dd _ngo -nt timestamp -uc "memory-xrc4sx.ucf" -p xc4vsx55-ff1148-10 "memory.ngc" memory.ngd
+map -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -p xc4vsx55-ff1148-10 -cm area -pr b -k 4 -c 100 -o memory_map.ncd memory.ngd memory.pcf
+par -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -w -intstyle ise -ol std -t 1 memory_map.ncd memory.ncd memory.pcf
+trce -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -e 3 -s 10 -xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
+bitgen -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -f memory.ut memory.ncd
+xst -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -ifn memory.xst -ofn memory.syr
+ngdbuild -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -dd _ngo -nt timestamp -uc "memory-xrc4sx.ucf" -p xc4vsx55-ff1148-10 "memory.ngc" memory.ngd
+map -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -p xc4vsx55-ff1148-10 -cm area -pr b -k 4 -c 100 -o memory_map.ncd memory.ngd memory.pcf
+par -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -w -intstyle ise -ol std -t 1 memory_map.ncd memory.ncd memory.pcf
+trce -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -e 3 -s 10 -xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
+bitgen -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -f memory.ut memory.ncd
+xst -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -ifn memory.xst -ofn memory.syr
+xst -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -ifn memory.xst -ofn memory.syr
+ngdbuild -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -dd _ngo -nt timestamp -uc "memory-xrc4sx.ucf" -p xc4vsx55-ff1148-10 "memory.ngc" memory.ngd
+map -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -p xc4vsx55-ff1148-10 -cm area -pr b -k 4 -c 100 -o memory_map.ncd memory.ngd memory.pcf
+par -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -w -intstyle ise -ol std -t 1 memory_map.ncd memory.ncd memory.pcf
+trce -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -e 3 -s 10 -xml memory memory.ncd -o memory.twr memory.pcf -ucf memory-xrc4sx.ucf
+bitgen -ise "C:/Users/FPGA/Desktop/fpga-filter-hardware-20181127/memory.ise" -intstyle ise -f memory.ut memory.ncd

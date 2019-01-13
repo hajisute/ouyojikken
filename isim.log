@@ -1,13 +1,181 @@
-ISim log file
-Running: C:\Users\yuuya\git\ouyojikken\operation_test_v_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/yuuya/git/ouyojikken/operation_test_v_isim_beh.wdb 
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-Time resolution is 1 ps
-# onerror resume
-# wave add /
-# run 1000 ns
+ command line:
+   ./operation_test_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  49469
+
+Tue Jan 08 16:57:06 2019
+
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_upper_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_middle_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_colmun0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out0 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out1 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out2 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out4 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out5 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+WARNING:Simulator:12 - Port out6 of module sort_column in instance
+   /operation_test_v/uut/medianfilter_lower_line/sort_queue0/ is left
+   unconnected.
+Total Line Count : 2684
+
+ Elaboration time : 0.1875 sec.
+
+ Estimate current memory usage : 147.726 Meg. 
+
+ Total Signals          : 2439
+ Total Nets             : 13485
+ Total Signal Drivers   : 1397
+ Total Blocks           : 397
+ Total Primitive Blocks : 263
+ Total Processes        : 1116
+ Total Traceable Variables  : 423
+ Total Scalar Nets and Variables : 29391
+ntrace select -o on -n /operation_test_v/out 
+ntrace select -o on -n /operation_test_v/uut/pixel_out_wire 
+ntrace select -o on -n /operation_test_v/PERIOD 
+ntrace select -o on -n /operation_test_v/clk 
+ntrace select -o on -n /operation_test_v/rst 
+ntrace select -o on -n /operation_test_v/refresh 
+ntrace select -o on -n /operation_test_v/data_bus 
+ntrace select -o on -n /operation_test_v/count 
+ntrace select -o on -n /operation_test_v/uut/data_bus 
+ntrace select -o on -n /operation_test_v/uut/i 
+ntrace start 
+isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
+
+ Simulation time 1.57813 sec.
+
+ Estimate current memory usage : 154.018 Meg. 
+
+Tue Jan 08 17:01:16 2019
+
